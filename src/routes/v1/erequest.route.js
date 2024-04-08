@@ -10,7 +10,9 @@ const router = express.Router();
 router
   .route('/')
   .get(erequestController.getERequests)
-  .post(erequestController.createERequest);
+  .post(erequestController.createERequest)
+  .put(erequestController.remoteERequest);
+router.route('/config').post(erequestController.createEConfig).get(erequestController.getEConfig);
 
 // router
 //   .route('/:userId')

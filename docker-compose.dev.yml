@@ -1,6 +1,9 @@
 version: '3'
 
 services:
-  node-app:
-    container_name: node-app-dev
+  node-app-a:
+    container_name: node-app-a
+    command: yarn dev -L
+  node-app-b:
+    container_name: node-app-b
     command: yarn dev -L

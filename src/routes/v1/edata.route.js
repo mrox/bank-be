@@ -7,10 +7,8 @@ const edataController = require('../../controllers/edata.controller');
 const router = express.Router();
 
 // eslint-disable-next-line prettier/prettier
-router
-  .route('/')
-  .get(edataController.getEDatas)
-  .post(edataController.createEData);
+router.route('/').get(edataController.getEDatas).post(edataController.createEData);
+router.route('/:id').get(edataController.getEData);
 
 // router
 //   .route('/:userId')
